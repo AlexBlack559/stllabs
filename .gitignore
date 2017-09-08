@@ -30,6 +30,7 @@
 *.exe
 *.out
 *.app
+<<<<<<< HEAD
 
 # Xcode
 #
@@ -55,3 +56,5 @@ xcuserdata/
 *.moved-aside
 *.xccheckout
 *.xcscmblueprint
+=======
+>>>>>>> c18256cd0e23fcf9bfbc05b5089f1ec6d44f59dc
