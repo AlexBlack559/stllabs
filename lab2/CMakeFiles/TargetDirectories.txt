@@ -1,3 +1,0 @@
-/Users/alexblack/Developer/Cpp/labs/lab2/CMakeFiles/rebuild_cache.dir
-/Users/alexblack/Developer/Cpp/labs/lab2/CMakeFiles/edit_cache.dir
-/Users/alexblack/Developer/Cpp/labs/lab2/CMakeFiles/lab2.dir
