@@ -30,7 +30,18 @@
 *.exe
 *.out
 *.app
-<<<<<<< HEAD
+
+# CMake
+build*
+CMakeCache.txt
+CMakeFiles
+CMakeScripts
+Testing
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
 
 # Xcode
 #
@@ -56,5 +67,3 @@ xcuserdata/
 *.moved-aside
 *.xccheckout
 *.xcscmblueprint
-=======
->>>>>>> c18256cd0e23fcf9bfbc05b5089f1ec6d44f59dc
