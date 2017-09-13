@@ -1,8 +1,11 @@
 #include <iostream>
+#include <fstream>
 
 using namespace std;
 
 int main() {
-    cout << "Hello world!" << endl;
+    ifstream file;
+    file.open("text.txt");
+    cout << "Hello, world!" << endl; 
     return 0;
 }
