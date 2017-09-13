@@ -1,3 +1,14 @@
+//
+//  Tokenizer.hpp
+//  lab2
+//
+//  Created by Alexander Chernyi on 13/09/2017.
+//  Copyright © 2017 Alexander Chernyi. All rights reserved.
+//
+
+#ifndef Tokenizer_hpp
+#define Tokenizer_hpp
+
 #include <string>
 #include <vector>
 
@@ -19,3 +30,5 @@ class Tokenizer {
 public:
     vector<Token> tokenize(string text);
 };
+
+#endif /* Tokenizer_hpp */
