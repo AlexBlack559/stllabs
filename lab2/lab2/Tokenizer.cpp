@@ -12,33 +12,30 @@
 #include <algorithm>
 
 vector<Token> Tokenizer::tokenize(string text) {
-    vector<Token> result;
-    istringstream iss(text);
+    vector<Token> tokens;
     
+    istringstream iss(text);
+
     do {
         string substring;
         iss >> substring;
         
-//        for (auto it = substring.begin(); it != substring.end(); it++) {
-//
-//        }
-        
-//        for (int i = 0; i < substring.size(); i++) {
-//            if (ispunct(substring[i])) {
-//                Token token(PUNCTUATION, substring.substr(i, 1));
-//                result.push_back(token);
-//
-//                //substring.erase()
-//            }
-//        }
-        
-//        for (auto symbol : subsstring) {
-//
-//        }
+        // Проверка на символы пунктуации.
+        for (auto it = PUNCT_SYMBOLS.begin(); it != PUNCT_SYMBOLS.end(); it++) {
+            auto foundIndex = substring.find(*it);
+            
+            // Если нашли смивол пуктуации, добавляем его в токен и удаляем из строки.
+            if (foundIndex != string::npos) {
+                Token token(PUNCTUATION, string(1, substring[foundIndex]));
+                tokens.push_back(token);
+                
+                substring.erase(substring.begin() + foundIndex);
+            }
+        }
         
         Token token(WORD, substring);
-        result.push_back(token);
+        tokens.push_back(token);
     } while (iss);
-    
-    return result;
+
+    return tokens;
 }

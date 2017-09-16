@@ -10,8 +10,33 @@
 #include <fstream>
 #include <streambuf>
 #include <vector>
+#include <string>
 #include "Tokenizer.h"
 
+string formattedStringFromTokens(vector<Token> tokens) {
+    string str;
+    
+//    for (auto token : tokens) {
+//        cout << token.kind << " ";
+//    }
+    
+   // cout << endl << endl;
+    
+    for (auto it = tokens.begin(); it != tokens.end(); it++) {
+        str += (*it).value;
+        
+        if ((*it).kind == WORD && (*it++).kind == PUNCTUATION) {
+            continue;
+            
+        }
+        
+        if ((*it).kind == WORD || (*it).kind == PUNCTUATION) {
+            str += " ";
+        }
+    }
+    
+    return str;
+}
 
 int main(int argc, const char * argv[]) {
 
@@ -26,12 +51,15 @@ int main(int argc, const char * argv[]) {
     string data((istreambuf_iterator<char>(file)), istreambuf_iterator<char>());
     Tokenizer tokenizer;
     auto tokens = tokenizer.tokenize(data);
+
+    auto resultString = formattedStringFromTokens(tokens);
+    cout << resultString << endl;
     
-    for (auto token : tokens) {
-        cout << token.value << endl;
-    }
+//    for (auto token : tokens) {
+//        cout << token.value << endl;
+//    }
     
-    cout << endl;
+    cout << endl; 
     
     return 0;
 }
