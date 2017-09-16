@@ -16,7 +16,7 @@
 int main(int argc, const char * argv[]) {
 
     ifstream file;
-    file.open("text.txt");
+    file.open("File.txt");
     
     if (!file) {
         cerr << "Error reading file" << endl;

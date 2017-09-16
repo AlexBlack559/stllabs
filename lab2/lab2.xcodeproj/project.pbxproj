@@ -7,23 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C409A6C1F6D214C00C035BC /* File.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0CC339781F698D2700F72CE3 /* File.txt */; };
 		E6EEFF291F697010009D96E6 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFF281F697010009D96E6 /* main.cpp */; };
 		E6EEFF321F69704F009D96E6 /* Tokenizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFF301F69704F009D96E6 /* Tokenizer.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		E6EEFF231F697010009D96E6 /* CopyFiles */ = {
+		0C409A6B1F6D214800C035BC /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			dstPath = "";
+			dstSubfolderSpec = 7;
 			files = (
+				0C409A6C1F6D214C00C035BC /* File.txt in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0CC339781F698D2700F72CE3 /* File.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = File.txt; sourceTree = "<group>"; };
 		E6EEFF251F697010009D96E6 /* lab2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = lab2; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6EEFF281F697010009D96E6 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		E6EEFF301F69704F009D96E6 /* Tokenizer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Tokenizer.cpp; sourceTree = "<group>"; };
@@ -63,6 +66,7 @@
 				E6EEFF281F697010009D96E6 /* main.cpp */,
 				E6EEFF311F69704F009D96E6 /* Tokenizer.h */,
 				E6EEFF301F69704F009D96E6 /* Tokenizer.cpp */,
+				0CC339781F698D2700F72CE3 /* File.txt */,
 			);
 			path = lab2;
 			sourceTree = "<group>";
@@ -76,7 +80,7 @@
 			buildPhases = (
 				E6EEFF211F697010009D96E6 /* Sources */,
 				E6EEFF221F697010009D96E6 /* Frameworks */,
-				E6EEFF231F697010009D96E6 /* CopyFiles */,
+				0C409A6B1F6D214800C035BC /* CopyFiles */,
 			);
 			buildRules = (
 			);
