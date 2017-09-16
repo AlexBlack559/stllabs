@@ -18,13 +18,12 @@ typedef chrono::high_resolution_clock Clock;
 template<typename T>
 void showVectorItems(vector<T> vec, string message);
 
-<<<<<<< HEAD
 template<typename T>
 void insertionSort(T* array, int size);
 
 template<typename T>
 void showArray(T* array, int size);
-=======
+
 int compvar(const void *one, const void *two)
 {
     int a = *((int*)one);
@@ -50,7 +49,6 @@ void task0() {
     showVectorItems(numbers, "After system quick sort: ");
     cout << endl;
 }
->>>>>>> 3837766646b6625c5229e8aee0dd385c935bb80b
 
 // Bubble sort
 void task1() {
@@ -217,14 +215,11 @@ int main(int argc, const char * argv[]) {
     task3();
     cout << "Task 4" << endl;
     task4();
-<<<<<<< HEAD
-    //task5();
-    task6();
-=======
     cout << "Task 5" << endl;
     task5();
->>>>>>> 3837766646b6625c5229e8aee0dd385c935bb80b
-    
+    cout << "Task 6" << endl;
+    task6();
+
     return 0;
 }
 
