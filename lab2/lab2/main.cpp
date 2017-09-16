@@ -16,12 +16,24 @@
 string formattedStringFromTokens(vector<Token> tokens) {
     string str;
     
+    // Счетчик количества символово в строке
+    int counter = 0;
+    
     for (auto it = tokens.begin(); it != tokens.end(); it++) {
+        
+        // Если длина строки превышает 40 символов – переходим на новую строку
+        if ((*it).value.size() + counter > 40) {
+            str += "\n";
+            counter = 0;
+        }
         
         if ((*it).value.size() < 10) {
             str += (*it).value;
+            counter += (*it).value.size();
         } else {
-            str += "Vau!!!";
+            const string wow = "Vau!!!";
+            str += wow;
+            counter += wow.size();
         }
         
         if ((*it).kind == WORD && (*next(it, 1)).kind == PUNCTUATION) {
@@ -31,6 +43,7 @@ string formattedStringFromTokens(vector<Token> tokens) {
         
         if ((*it).kind == WORD || (*it).kind == PUNCTUATION) {
             str += " ";
+            counter++;
         }
     }
     
@@ -53,12 +66,6 @@ int main(int argc, const char * argv[]) {
 
     auto resultString = formattedStringFromTokens(tokens);
     cout << resultString << endl;
-    
-//    for (auto token : tokens) {
-//        cout << token.value << endl;
-//    }
-    
-    cout << endl; 
     
     return 0;
 }
