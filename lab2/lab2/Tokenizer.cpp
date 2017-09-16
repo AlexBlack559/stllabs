@@ -33,8 +33,10 @@ vector<Token> Tokenizer::tokenize(string text) {
             }
         }
         
-        Token token(WORD, substring);
-        tokens.push_back(token);
+        if (!substring.empty()) {
+            Token token(WORD, substring);
+            tokens.push_back(token);
+        }
     } while (iss);
 
     return tokens;

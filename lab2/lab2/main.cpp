@@ -16,16 +16,15 @@
 string formattedStringFromTokens(vector<Token> tokens) {
     string str;
     
-//    for (auto token : tokens) {
-//        cout << token.kind << " ";
-//    }
-    
-   // cout << endl << endl;
-    
     for (auto it = tokens.begin(); it != tokens.end(); it++) {
-        str += (*it).value;
         
-        if ((*it).kind == WORD && (*it++).kind == PUNCTUATION) {
+        if ((*it).value.size() < 10) {
+            str += (*it).value;
+        } else {
+            str += "Vau!!!";
+        }
+        
+        if ((*it).kind == WORD && (*next(it, 1)).kind == PUNCTUATION) {
             continue;
             
         }
