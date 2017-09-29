@@ -11,6 +11,8 @@
 
 #include <string>
 #include <list>
+#include <iostream>
+
 using namespace std;
 
 enum ElementPriority {
@@ -18,8 +20,10 @@ enum ElementPriority {
 };
 
 struct QueueElement {
-    string name;
+    std::string name;
     ElementPriority priority;
+    
+    friend ostream& operator<<(ostream& os, const QueueElement& element);
 };
 
 class QueueWithPriority {

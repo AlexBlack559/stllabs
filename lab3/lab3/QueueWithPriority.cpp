@@ -8,6 +8,11 @@
 
 #include "QueueWithPriority.hpp"
 
+std::ostream& operator<<(std::ostream& os, const QueueElement& element) {
+    os << element.name;
+    return os;
+}
+
 QueueWithPriority::QueueWithPriority() {}
 QueueWithPriority::~QueueWithPriority() {}
 
@@ -20,25 +25,26 @@ void QueueWithPriority::PutElementToQueue(QueueElement element,
 QueueElement QueueWithPriority::GetElementFromQueue() {
     QueueElement returnValue;
     
-    for (auto it = queue.end(); it != queue.begin(); it--) {
+    for (auto it = queue.rbegin(); it != queue.rend(); it++) {
         if ((*it).priority == HIGH) {
             returnValue = *it;
-            queue.erase(it);
-        }
-    }
-    
-    for (auto it = queue.end(); it != queue.begin(); it--) {
-        if ((*it).priority == NORMAL) {
-            returnValue = *it;
-            queue.erase(it);
+            queue.erase(next(it).base());
             return returnValue;
         }
     }
     
-    for (auto it = queue.end(); it != queue.begin(); it--) {
+    for (auto it = queue.rbegin(); it != queue.rend(); it++) {
+        if ((*it).priority == NORMAL) {
+            returnValue = *it;
+            queue.erase(next(it).base());
+            return returnValue;
+        }
+    }
+    
+    for (auto it = queue.rbegin(); it != queue.rend(); it++) {
         if ((*it).priority == LOW) {
             returnValue = *it;
-            queue.erase(it);
+            queue.erase(next(it).base());
             return returnValue;
         }
     }

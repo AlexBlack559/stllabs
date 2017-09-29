@@ -61,8 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				E6BB3E611F6D7E0300DBEBB6 /* main.cpp */,
-				E6BB3E681F6D7F5700DBEBB6 /* QueueWithPriority.cpp */,
 				E6BB3E691F6D7F5700DBEBB6 /* QueueWithPriority.hpp */,
+				E6BB3E681F6D7F5700DBEBB6 /* QueueWithPriority.cpp */,
 			);
 			path = lab3;
 			sourceTree = "<group>";
