@@ -11,6 +11,8 @@
 
 using namespace std;
 
+void show_all_nums(list<int> nums);
+
 void first_task() {
     auto queue = QueueWithPriority();
     queue.PutElementToQueue(QueueElement({"first"}), NORMAL);
@@ -36,7 +38,35 @@ void first_task() {
 }
 
 void second_task() {
+    srand(unsigned(time(0)));
     
+    list<int> nums;
+    
+    for (int i = 0; i < 20; i++) {
+        nums.push_back(rand() % 20 + 1);
+    }
+    
+    for (auto it = nums.begin(); it != nums.end(); it++) {
+        cout << (*it) << " ";
+    }
+    
+    cout << endl;
+    
+    show_all_nums(nums);
+}
+
+void show_all_nums(list<int> nums) {
+    while (nums.size() != 0) {
+        cout << nums.front() << " ";
+        nums.pop_front();
+        
+        if (nums.size() != 0) {
+            cout << nums.back()  << " ";
+            nums.pop_back();
+        }
+    }
+    
+    cout << endl;
 }
 
 int main(int argc, const char * argv[]) {
