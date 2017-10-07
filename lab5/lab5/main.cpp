@@ -3,8 +3,28 @@
 //  lab5
 //
 //  Created by Alexander Chernyi on 29/09/2017.
-//  Copyright © 2017 Alexander Chernyi. All rights reserved.
+//  Copyright ©2017 Alexander Chernyi. All rights reserved.
 //
+
+/*
+ 
+ a.    Заполняет vector<DataStruct> структурами DataStruct, при этом key1 и key2, генерируются случайным образом в диапазоне от -5 до 5, str заполняется из таблицы (таблица содержит 10 произвольных строк, индекс строки генерируется случайным образом)
+ b.    Выводит полученный вектор на печать
+ c.    Сортирует вектор следующим образом:
+ i.    По возрастанию key1
+ ii.    Если key1 одинаковые, то по возрастанию key2
+ iii.    Если key1 и key2 одинаковые, то по возрастанию длинны строки str
+ d.    Выводит полученный вектор на печать
+ 
+ DataStruct определена следующим образом:
+ typedef struct
+ {
+ int       key1;
+ int       key2;
+ string  str;
+ } DataStruct;
+ 
+ */
 
 #include <iostream>
 #include <vector>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C3907061F7F894800547D56 /* main.cpp in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6EEFF281F697010009D96E6 /* main.cpp */; };
 		0C409A6C1F6D214C00C035BC /* File.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0CC339781F698D2700F72CE3 /* File.txt */; };
 		E6EEFF291F697010009D96E6 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFF281F697010009D96E6 /* main.cpp */; };
 		E6EEFF321F69704F009D96E6 /* Tokenizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6EEFF301F69704F009D96E6 /* Tokenizer.cpp */; };
@@ -19,6 +20,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
+				0C3907061F7F894800547D56 /* main.cpp in CopyFiles */,
 				0C409A6C1F6D214C00C035BC /* File.txt in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
